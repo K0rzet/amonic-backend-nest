@@ -12,7 +12,7 @@ export class RefreshTokenService {
 
 		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
 			httpOnly: true,
-			domain: process.env.MODE === 'production' ? process.env.URL : 'localhost',
+			domain: '176.124.218.145',
 			expires: expiresIn,
 			secure: false, // true if production
 			sameSite: 'none' // lax if production
@@ -22,7 +22,7 @@ export class RefreshTokenService {
 	removeRefreshTokenFromResponse(res: Response) {
 		res.cookie(this.REFRESH_TOKEN_NAME, '', {
 			httpOnly: true,
-			domain: process.env.MODE === 'production' ? process.env.URL : 'localhost',
+			domain: '176.124.218.145',
 			expires: new Date(0),
 			secure: false, // true if production
 			sameSite: 'none' // lax if production

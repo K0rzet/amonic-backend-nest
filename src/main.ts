@@ -9,9 +9,10 @@ async function bootstrap() {
 
 	app.use(cookieParser())
 	app.enableCors({
-		origin: ['http://localhost:3000', 'http://176.124.218.145:2223'],
+		origin: ['http://176.124.218.145:2223'],
 		credentials: true,
-		exposedHeaders: 'set-cookie'
+		exposedHeaders: 'set-cookie,Authorization',
+		allowedHeaders: 'set-cookie,Authorization'
 	})
 
 	await app.listen(process.env.MODE === 'production' ? process.env.PORT : 4200)
