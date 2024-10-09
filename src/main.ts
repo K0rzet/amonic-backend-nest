@@ -14,6 +14,6 @@ async function bootstrap() {
 		exposedHeaders: 'set-cookie'
 	})
 
-	await app.listen(process.env.PORT || 4200)
+	await app.listen(process.env.MODE === 'production' ? process.env.PORT : 4200)
 }
 bootstrap()
