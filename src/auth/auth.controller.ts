@@ -78,6 +78,7 @@ export class AuthController {
 	) {
 		await this.authService.logout(id)
 		await this.refreshTokenService.removeRefreshTokenFromResponse(res)
+		await this.refreshTokenService.removeAccessTokenFromResponse(res)
 
 		return true
 	}
