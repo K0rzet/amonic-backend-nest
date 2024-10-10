@@ -9,7 +9,7 @@ async function bootstrap() {
 
 	app.use(cookieParser())
 	app.enableCors({
-		origin: ['http://176.124.218.145:2223'],
+		origin: ['https://amonic.ilyacode.ru/'],
 		credentials: true,
 		exposedHeaders: 'set-cookie'
 	})

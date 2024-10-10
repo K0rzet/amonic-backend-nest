@@ -12,7 +12,7 @@ export class RefreshTokenService {
 
 		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
 			httpOnly: true,
-			domain: '176.124.218.145',
+			domain: 'amonic.ilyacode.ru',
 			expires: expiresIn,
 			secure: false, // true if production
 			sameSite: 'lax' // lax if production
@@ -22,7 +22,7 @@ export class RefreshTokenService {
 	removeRefreshTokenFromResponse(res: Response) {
 		res.cookie(this.REFRESH_TOKEN_NAME, '', {
 			httpOnly: true,
-			domain: '176.124.218.145',
+			domain: 'amonic.ilyacode.ru',
 			expires: new Date(0),
 			secure: false, // true if production
 			sameSite: 'lax' // lax if production
